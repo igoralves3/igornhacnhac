@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 
 @export var team: int = 1;
@@ -14,7 +14,13 @@ var player2: Node
 
 var cells
 
+
+
+@export var dragged = false
+
 func _ready():
+	
+	
 	defaultPosition = position
 	gameManager = get_parent().get_parent().get_node("GameManager")
 	player1 = get_parent().get_parent().get_node("Player1")
@@ -22,7 +28,10 @@ func _ready():
 	cells = get_parent().get_parent().get_node("Cells").get_children()
 		
 func _physics_process(delta: float) -> void:
-	pass
+	if dragged:
+		position = get_global_mouse_position()
+	elif currentCellRow == -1 and currentCellColumn == -1:
+		position = defaultPosition
 	
 func onmouseclick() -> bool:
 	var deltaX = abs(position.x-get_global_mouse_position().x)
@@ -32,29 +41,32 @@ func onmouseclick() -> bool:
 	
 func _input(event: InputEvent) -> void:
 
-	if event.is_action_pressed(&"player_action") and onmouseclick():
-		print("team " + str(team) + " size " + str(size))
-		if gameManager.currentPlayer == 1:
-			if team == gameManager.currentPlayer:
-				print(str(gameManager.currentPlayer))
-				if player1.putting == false:
-					print('selecting');
-					player1.putting = true
-					player1.selectedPiece = self
+	if event.is_action_pressed(&"player_action"):
+		if onmouseclick():
+			#print("team " + str(team) + " size " + str(size))
+			if !dragged:
+				if gameManager.currentPlayer == 1:
+					if team == gameManager.currentPlayer:
+						print(str(gameManager.currentPlayer))
+						if player1.putting == false:
+							#print('selecting');
+							player1.putting = true
+							
+							player1.selectedPiece =self
 				
+							dragged = true
+								
+				else:
+					if team == gameManager.currentPlayer:
+						print(str(gameManager.currentPlayer))
+						if player2.putting == false:
+							#print('selecting');
+							player2.putting = true
+							player2.selectedPiece = self
 					
-					
-			else:
-				print('putting');
-		else:
-			if team == gameManager.currentPlayer:
-				print(str(gameManager.currentPlayer))
-				if player2.putting == false:
-					print('selecting');
-					player2.putting = true
-					player2.selectedPiece = self
-				#else:
-						
+							dragged = true
+						#else:
+								
 				
 		
 		

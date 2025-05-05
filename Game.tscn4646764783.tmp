@@ -130,69 +130,53 @@ column = 3
 
 [node name="Pieces" type="Node" parent="."]
 
-[node name="T1P1" type="Node2D" parent="Pieces"]
+[node name="T1P1" type="Sprite2D" parent="Pieces"]
 position = Vector2(64, 82)
+texture = ExtResource("1_r0x5m")
 script = ExtResource("2_lvtmh")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P1"]
-texture = ExtResource("1_r0x5m")
-
-[node name="T1P2" type="Node2D" parent="Pieces"]
+[node name="T1P2" type="Sprite2D" parent="Pieces"]
 position = Vector2(64, 160)
+texture = ExtResource("2_3mrqo")
 script = ExtResource("2_lvtmh")
 size = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P2"]
-texture = ExtResource("2_3mrqo")
-
-[node name="T1P3" type="Node2D" parent="Pieces"]
+[node name="T1P3" type="Sprite2D" parent="Pieces"]
 position = Vector2(64, 240)
+texture = ExtResource("3_joorw")
 script = ExtResource("2_lvtmh")
 size = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P3"]
-texture = ExtResource("3_joorw")
-
-[node name="T1P4" type="Node2D" parent="Pieces"]
+[node name="T1P4" type="Sprite2D" parent="Pieces"]
 position = Vector2(65, 327)
+texture = ExtResource("4_2vekm")
 script = ExtResource("2_lvtmh")
 size = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P4"]
-texture = ExtResource("4_2vekm")
-
-[node name="T1P5" type="Node2D" parent="Pieces"]
+[node name="T1P5" type="Sprite2D" parent="Pieces"]
 position = Vector2(65, 408)
+texture = ExtResource("5_yx171")
 script = ExtResource("2_lvtmh")
 size = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P5"]
-texture = ExtResource("5_yx171")
-
-[node name="T1P6" type="Node2D" parent="Pieces"]
+[node name="T1P6" type="Sprite2D" parent="Pieces"]
 position = Vector2(65, 487)
+texture = ExtResource("6_yhmtn")
 script = ExtResource("2_lvtmh")
 size = 6
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P6"]
-texture = ExtResource("6_yhmtn")
-
-[node name="T2P1" type="Node2D" parent="Pieces"]
+[node name="T2P1" type="Sprite2D" parent="Pieces"]
 position = Vector2(915, 87)
+texture = ExtResource("7_gwjdr")
 script = ExtResource("2_lvtmh")
 team = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P1"]
-texture = ExtResource("7_gwjdr")
-
-[node name="T2P2" type="Node2D" parent="Pieces"]
+[node name="T2P2" type="Sprite2D" parent="Pieces"]
 position = Vector2(916, 160)
+texture = ExtResource("8_lvtmh")
 script = ExtResource("2_lvtmh")
 team = 2
 size = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P2"]
-texture = ExtResource("8_lvtmh")
 
 [node name="T2P3" type="Sprite2D" parent="Pieces"]
 position = Vector2(919, 240)
@@ -201,35 +185,26 @@ script = ExtResource("2_lvtmh")
 team = 2
 size = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P3"]
-texture = ExtResource("9_yyih5")
-
-[node name="T2P4" type="Node2D" parent="Pieces"]
+[node name="T2P4" type="Sprite2D" parent="Pieces"]
 position = Vector2(920, 322)
+texture = ExtResource("10_qjyg3")
 script = ExtResource("2_lvtmh")
 team = 2
 size = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P4"]
-texture = ExtResource("10_qjyg3")
-
-[node name="T2P5" type="Node2D" parent="Pieces"]
+[node name="T2P5" type="Sprite2D" parent="Pieces"]
 position = Vector2(921, 403)
+texture = ExtResource("11_elkpi")
 script = ExtResource("2_lvtmh")
 team = 2
 size = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P5"]
-texture = ExtResource("11_elkpi")
-
-[node name="T2P6" type="Node2D" parent="Pieces"]
+[node name="T2P6" type="Sprite2D" parent="Pieces"]
 position = Vector2(921, 479)
+texture = ExtResource("12_0yprl")
 script = ExtResource("2_lvtmh")
 team = 2
 size = 6
-
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P6"]
-texture = ExtResource("12_0yprl")
 
 [node name="Player1" type="Node" parent="."]
 script = ExtResource("15_qjyg3")

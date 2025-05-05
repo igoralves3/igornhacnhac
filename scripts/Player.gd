@@ -5,7 +5,7 @@ extends Node
 @export var PlayerNumber = 1
 
 
-@export var selectedPiece : Sprite2D= null
+@export var selectedPiece = null
 
 @export var playing:=false
 @export var putting := false
