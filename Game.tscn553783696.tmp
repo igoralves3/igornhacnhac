@@ -231,10 +231,10 @@ size = 6
 [node name="Sprite2D" type="Sprite2D" parent="Pieces/T2P6"]
 texture = ExtResource("12_0yprl")
 
-[node name="Player1" type="Node2D" parent="."]
+[node name="Player1" type="Node" parent="."]
 script = ExtResource("15_qjyg3")
 
-[node name="Player2" type="Node2D" parent="."]
+[node name="Player2" type="Node" parent="."]
 script = ExtResource("15_qjyg3")
 PlayerNumber = 2
 

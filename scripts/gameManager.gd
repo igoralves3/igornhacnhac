@@ -3,8 +3,8 @@ extends Node
 
 @export var currentPlayer := 1;
 
-var player1:Node
-var player2:Node
+var player1:Node2D
+var player2:Node2D
 
 func _ready() -> void:
 	player1 = get_parent().get_node("Player1")
