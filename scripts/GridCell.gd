@@ -3,7 +3,6 @@ extends Node2D
 
 
 
-
 @export var row=1;
 @export var column=1;
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://du18olc2mhd80"]
+[gd_scene load_steps=18 format=3 uid="uid://du18olc2mhd80"]
 
 [ext_resource type="Texture2D" uid="uid://dr81umld7si3" path="res://sprites/T1P1.png" id="1_r0x5m"]
 [ext_resource type="Script" uid="uid://o4mdidl1gn3a" path="res://scripts/GridCell.gd" id="1_yyih5"]
@@ -16,45 +16,46 @@
 [ext_resource type="Texture2D" uid="uid://cllu7ba35gqwb" path="res://sprites/T2P6.png" id="12_0yprl"]
 [ext_resource type="Script" uid="uid://cxsbcxoq8e8s5" path="res://scripts/Player.gd" id="15_qjyg3"]
 [ext_resource type="Script" uid="uid://bcxc8g3n6muho" path="res://scripts/gameManager.gd" id="16_elkpi"]
+[ext_resource type="Script" uid="uid://dn283rupsatfp" path="res://label.gd" id="17_0yprl"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Grid" type="Node" parent="."]
 
 [node name="GridRedBar1" type="ColorRect" parent="Grid"]
-offset_left = 322.0
-offset_top = 73.0
-offset_right = 371.0
-offset_bottom = 586.0
+offset_left = 318.0
+offset_top = 104.0
+offset_right = 367.0
+offset_bottom = 617.0
 color = Color(1, 0, 0, 1)
 
 [node name="GridRedBar2" type="ColorRect" parent="Grid"]
-offset_left = 605.0
-offset_top = 73.0
-offset_right = 654.0
-offset_bottom = 582.0
+offset_left = 606.0
+offset_top = 108.0
+offset_right = 655.0
+offset_bottom = 617.0
 color = Color(1, 0, 0, 1)
 
 [node name="GridGreenBar1" type="ColorRect" parent="Grid"]
 offset_left = 159.0
-offset_top = 200.0
+offset_top = 241.0
 offset_right = 920.0
-offset_bottom = 240.0
+offset_bottom = 281.0
 scale = Vector2(0.88, 1)
 color = Color(0, 1, 0, 1)
 
 [node name="GridGreenBar2" type="ColorRect" parent="Grid"]
-offset_left = 163.0
-offset_top = 409.0
-offset_right = 919.0
-offset_bottom = 449.0
+offset_left = 166.0
+offset_top = 462.0
+offset_right = 922.0
+offset_bottom = 502.0
 scale = Vector2(0.880001, 1)
 color = Color(0, 1, 0, 1)
 
 [node name="Cells" type="Node" parent="."]
 
 [node name="Cell1x1" type="Node2D" parent="Cells"]
-position = Vector2(224, 97)
+position = Vector2(228, 150)
 script = ExtResource("1_yyih5")
 
 [node name="ColorRect" type="ColorRect" parent="Cells/Cell1x1"]
@@ -62,7 +63,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell1x2" type="Node2D" parent="Cells"]
-position = Vector2(474, 100)
+position = Vector2(473, 149)
 script = ExtResource("1_yyih5")
 column = 2
 
@@ -72,7 +73,7 @@ offset_bottom = 40.0
 pivot_offset = Vector2(20, 20)
 
 [node name="Cell1x3" type="Node2D" parent="Cells"]
-position = Vector2(747, 100)
+position = Vector2(744, 153)
 script = ExtResource("1_yyih5")
 column = 3
 
@@ -81,7 +82,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell2x1" type="Node2D" parent="Cells"]
-position = Vector2(228, 285)
+position = Vector2(231, 339)
 script = ExtResource("1_yyih5")
 row = 2
 
@@ -90,7 +91,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell2x2" type="Node2D" parent="Cells"]
-position = Vector2(474, 291)
+position = Vector2(476, 344)
 script = ExtResource("1_yyih5")
 row = 2
 column = 2
@@ -100,7 +101,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell2x3" type="Node2D" parent="Cells"]
-position = Vector2(747, 296)
+position = Vector2(739, 353)
 script = ExtResource("1_yyih5")
 row = 2
 column = 3
@@ -110,7 +111,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell3x1" type="Node2D" parent="Cells"]
-position = Vector2(227, 496)
+position = Vector2(228, 555)
 script = ExtResource("1_yyih5")
 row = 3
 
@@ -119,7 +120,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell3x2" type="Node2D" parent="Cells"]
-position = Vector2(479, 493)
+position = Vector2(479, 552)
 script = ExtResource("1_yyih5")
 row = 3
 column = 2
@@ -129,7 +130,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cell3x3" type="Node2D" parent="Cells"]
-position = Vector2(748, 501)
+position = Vector2(741, 543)
 script = ExtResource("1_yyih5")
 row = 3
 column = 3
@@ -141,14 +142,14 @@ offset_bottom = 40.0
 [node name="Pieces" type="Node" parent="."]
 
 [node name="T1P1" type="Node2D" parent="Pieces"]
-position = Vector2(64, 82)
+position = Vector2(60, 119)
 script = ExtResource("2_lvtmh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pieces/T1P1"]
 texture = ExtResource("1_r0x5m")
 
 [node name="T1P2" type="Node2D" parent="Pieces"]
-position = Vector2(64, 160)
+position = Vector2(58, 211)
 script = ExtResource("2_lvtmh")
 size = 2
 
@@ -156,7 +157,7 @@ size = 2
 texture = ExtResource("2_3mrqo")
 
 [node name="T1P3" type="Node2D" parent="Pieces"]
-position = Vector2(64, 240)
+position = Vector2(60, 301)
 script = ExtResource("2_lvtmh")
 size = 3
 
@@ -164,7 +165,7 @@ size = 3
 texture = ExtResource("3_joorw")
 
 [node name="T1P4" type="Node2D" parent="Pieces"]
-position = Vector2(65, 327)
+position = Vector2(61, 393)
 script = ExtResource("2_lvtmh")
 size = 4
 
@@ -172,7 +173,7 @@ size = 4
 texture = ExtResource("4_2vekm")
 
 [node name="T1P5" type="Node2D" parent="Pieces"]
-position = Vector2(65, 408)
+position = Vector2(59, 483)
 script = ExtResource("2_lvtmh")
 size = 5
 
@@ -180,7 +181,7 @@ size = 5
 texture = ExtResource("5_yx171")
 
 [node name="T1P6" type="Node2D" parent="Pieces"]
-position = Vector2(65, 487)
+position = Vector2(61, 569)
 script = ExtResource("2_lvtmh")
 size = 6
 
@@ -188,7 +189,7 @@ size = 6
 texture = ExtResource("6_yhmtn")
 
 [node name="T2P1" type="Node2D" parent="Pieces"]
-position = Vector2(915, 87)
+position = Vector2(909, 129)
 script = ExtResource("2_lvtmh")
 team = 2
 
@@ -196,7 +197,7 @@ team = 2
 texture = ExtResource("7_gwjdr")
 
 [node name="T2P2" type="Node2D" parent="Pieces"]
-position = Vector2(916, 160)
+position = Vector2(907, 220)
 script = ExtResource("2_lvtmh")
 team = 2
 size = 2
@@ -205,7 +206,7 @@ size = 2
 texture = ExtResource("8_lvtmh")
 
 [node name="T2P3" type="Sprite2D" parent="Pieces"]
-position = Vector2(919, 240)
+position = Vector2(909, 306)
 texture = ExtResource("9_yyih5")
 script = ExtResource("2_lvtmh")
 team = 2
@@ -215,7 +216,7 @@ size = 3
 texture = ExtResource("9_yyih5")
 
 [node name="T2P4" type="Node2D" parent="Pieces"]
-position = Vector2(920, 322)
+position = Vector2(910, 397)
 script = ExtResource("2_lvtmh")
 team = 2
 size = 4
@@ -224,7 +225,7 @@ size = 4
 texture = ExtResource("10_qjyg3")
 
 [node name="T2P5" type="Node2D" parent="Pieces"]
-position = Vector2(921, 403)
+position = Vector2(911, 485)
 script = ExtResource("2_lvtmh")
 team = 2
 size = 5
@@ -233,7 +234,7 @@ size = 5
 texture = ExtResource("11_elkpi")
 
 [node name="T2P6" type="Node2D" parent="Pieces"]
-position = Vector2(921, 479)
+position = Vector2(912, 568)
 script = ExtResource("2_lvtmh")
 team = 2
 size = 6
@@ -250,3 +251,14 @@ PlayerNumber = 2
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("16_elkpi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("17_0yprl")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 341.0
+offset_top = 17.0
+offset_right = 660.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 50
+text = "Player 1 Turn"
