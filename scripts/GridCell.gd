@@ -1,4 +1,4 @@
-extends ColorRect
+extends Node2D
 
 
 
@@ -9,7 +9,7 @@ extends ColorRect
 
 @export var pieceStack := Array([], TYPE_OBJECT, "Node2D", null)
 
-
+@onready var cell := $ColorRect
 
 @export var topSprite:Node2D = null
 
@@ -19,17 +19,22 @@ var player2: Node2D
 var currentPlayer: Node2D
 
 func _ready():
-	gameManager = get_parent().get_parent().get_node("GameManager")
-	player1 = get_parent().get_parent().get_node("Player1")
-	player2 = get_parent().get_parent().get_node("Player2")
+	var gameNode = get_tree().root.get_node("Game")
+	
+	gameManager = gameNode.get_node("GameManager")
+	player1 = gameNode.get_node("Player1")
+	player2 = gameNode.get_node("Player2")
 	currentPlayer = player1
+	
+	#cell = $ColorRect
+	print(cell)
 	
 func _physics_process(delta: float) -> void:
 	pass
 	
 	
 func onmouseclick() -> bool:
-	var deltaX = abs(position.x-get_global_mouse_position().x)
+	var deltaX = abs(position.x - get_global_mouse_position().x)
 	var deltaY = abs(position.y-get_global_mouse_position().y)
 	return deltaX <= 50 and deltaY <= 50 
 
@@ -55,10 +60,8 @@ func _input(event: InputEvent) -> void:
 					if pieceStack.size() > 0:
 						var top = pieceStack[pieceStack.size()-1]
 						if top.team == 1:
-							player1.selectedPiece = top
-							player1.selectedPiece.dragged=true
-						
-							pieceStack.pop_back()
+							removePiece(player1)
+							
 						
 				
 					
@@ -75,6 +78,12 @@ func _input(event: InputEvent) -> void:
 				
 			
 		
+		
+func removePiece(player):
+	player.selectedPiece = pieceStack[pieceStack.size()-1]
+	player.selectedPiece.dragged=true
+						
+	pieceStack.pop_back()
 	
 func receivePiece(player, otherPlayer):
 

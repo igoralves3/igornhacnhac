@@ -19,13 +19,13 @@ var cells
 @export var dragged = false
 
 func _ready():
-	
+	var gameNode = get_tree().root.get_node("Game")
 	
 	defaultPosition = position
-	gameManager = get_parent().get_parent().get_node("GameManager")
-	player1 = get_parent().get_parent().get_node("Player1")
-	player2 = get_parent().get_parent().get_node("Player2")
-	cells = get_parent().get_parent().get_node("Cells").get_children()
+	gameManager = gameNode.get_node("GameManager")
+	player1 = gameNode.get_node("Player1")
+	player2 = gameNode.get_node("Player2")
+	cells = gameNode.get_node("Cells").get_children()
 		
 func _physics_process(delta: float) -> void:
 	if dragged:

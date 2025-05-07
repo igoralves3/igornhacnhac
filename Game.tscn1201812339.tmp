@@ -53,90 +53,88 @@ color = Color(0, 1, 0, 1)
 
 [node name="Cells" type="Node" parent="."]
 
-[node name="Cell1x1" type="Node2D" parent="Cells"]
-position = Vector2(224, 97)
+[node name="Cell1x1" type="Node" parent="Cells"]
 script = ExtResource("1_yyih5")
+row = null
+column = null
 
 [node name="ColorRect" type="ColorRect" parent="Cells/Cell1x1"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 224.0
+offset_top = 100.0
+offset_right = 264.0
+offset_bottom = 140.0
 
-[node name="Cell1x2" type="Node2D" parent="Cells"]
-position = Vector2(474, 100)
+[node name="Cell1x2" type="ColorRect" parent="Cells"]
+offset_left = 469.0
+offset_top = 111.0
+offset_right = 509.0
+offset_bottom = 151.0
 script = ExtResource("1_yyih5")
+row = null
 column = 2
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell1x2"]
-offset_right = 40.0
-offset_bottom = 40.0
-pivot_offset = Vector2(20, 20)
-
-[node name="Cell1x3" type="Node2D" parent="Cells"]
-position = Vector2(747, 100)
+[node name="Cell1x3" type="ColorRect" parent="Cells"]
+offset_left = 734.0
+offset_top = 111.0
+offset_right = 774.0
+offset_bottom = 151.0
 script = ExtResource("1_yyih5")
+row = null
 column = 3
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell1x3"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Cell2x1" type="Node2D" parent="Cells"]
-position = Vector2(228, 285)
+[node name="Cell2x1" type="ColorRect" parent="Cells"]
+offset_left = 223.0
+offset_top = 301.0
+offset_right = 263.0
+offset_bottom = 341.0
 script = ExtResource("1_yyih5")
 row = 2
+column = null
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell2x1"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Cell2x2" type="Node2D" parent="Cells"]
-position = Vector2(474, 291)
+[node name="Cell2x2" type="ColorRect" parent="Cells"]
+offset_left = 470.0
+offset_top = 297.0
+offset_right = 510.0
+offset_bottom = 337.0
 script = ExtResource("1_yyih5")
 row = 2
 column = 2
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell2x2"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Cell2x3" type="Node2D" parent="Cells"]
-position = Vector2(747, 296)
+[node name="Cell2x3" type="ColorRect" parent="Cells"]
+offset_left = 735.0
+offset_top = 298.0
+offset_right = 775.0
+offset_bottom = 338.0
 script = ExtResource("1_yyih5")
 row = 2
 column = 3
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell2x3"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Cell3x1" type="Node2D" parent="Cells"]
-position = Vector2(227, 496)
+[node name="Cell3x1" type="ColorRect" parent="Cells"]
+offset_left = 221.0
+offset_top = 491.0
+offset_right = 261.0
+offset_bottom = 531.0
 script = ExtResource("1_yyih5")
 row = 3
+column = null
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell3x1"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Cell3x2" type="Node2D" parent="Cells"]
-position = Vector2(479, 493)
+[node name="Cell3x2" type="ColorRect" parent="Cells"]
+offset_left = 471.0
+offset_top = 501.0
+offset_right = 511.0
+offset_bottom = 541.0
 script = ExtResource("1_yyih5")
 row = 3
 column = 2
 
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell3x2"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Cell3x3" type="Node2D" parent="Cells"]
-position = Vector2(748, 501)
+[node name="Cell3x3" type="ColorRect" parent="Cells"]
+offset_left = 731.0
+offset_top = 502.0
+offset_right = 771.0
+offset_bottom = 542.0
 script = ExtResource("1_yyih5")
 row = 3
 column = 3
-
-[node name="ColorRect" type="ColorRect" parent="Cells/Cell3x3"]
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Pieces" type="Node" parent="."]
 
